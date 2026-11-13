@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=docs2">
 </head>
 <body>
 <header class="topbar">
@@ -67,5 +67,5 @@
 </main>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <dialog id="addDialog" class="modal"><form method="dialog" id="addForm"><div class="modal-head"><div><span class="eyebrow">NEW VALUE</span><h2 id="dialogTitle">Add property</h2></div><button class="square-btn" value="cancel" aria-label="Close"><i class="bi bi-x-lg"></i></button></div><label class="form-label" for="newKey">Property name</label><input id="newKey" class="text-input" placeholder="e.g. username" maxlength="120"><div class="modal-hint" id="keyHint">Choose a clear name for this field.</div><label class="form-label" for="newType">Value type</label><select id="newType" class="text-input"><option value="string">Text</option><option value="number">Number</option><option value="boolean">Boolean</option><option value="object">Object</option><option value="array">Array</option><option value="null">Null</option></select><div class="modal-actions"><button class="tool-btn" value="cancel">Cancel</button><button class="tool-btn primary" id="confirmAdd" value="default">Add field</button></div></form></dialog>
-<script src="app.js" defer></script>
+<script src="app.js?v=docs2" defer></script>
 </body></html>
