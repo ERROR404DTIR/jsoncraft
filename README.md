@@ -1,5 +1,7 @@
 # JSONCraft
 
+<p align="center"><img src="assets/readme-banner.svg" alt="Animated JSONCraft JSON editor banner" width="100%"></p>
+
 A visual, mobile-first JSON editor for people who want to work with structured data without writing every bracket by hand.
 
 **Live app:** https://error404dtir.github.io/jsoncraft/
