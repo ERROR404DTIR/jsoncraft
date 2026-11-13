@@ -22,7 +22,7 @@ const labelPath=p=>p.length?'$.'+p.map((k,i)=>typeof k==='number'?'['+k+']':(i?'
 const pretty=()=>JSON.stringify(data,null,2);
 function toast(message){const el=$('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2200);}
 function markDirty(){dirty=true;$('#dirtyMark').style.display='inline-block';$('#saveState').textContent='Unsaved changes';}
-function saveLocal(){try{const current=currentDocument();if(current)current.data=clone(data);localStorage.setItem('jsoncraft.document',JSON.stringify(data));localStorage.setItem('jsoncraft.updated',new Date().toISOString());if(current)localStorage.setItem('jsoncraft.documents',JSON.stringify(documents));$('#saveState').textContent='Saved locally';dirty=false;$('#dirtyMark').style.display='none';}catch(e){$('#saveState').textContent='Storage unavailable';}}
+function saveLocal(){try{const current=currentDocument();if(current)current.data=clone(data);localStorage.setItem('jsoncraft.document',JSON.stringify(data));localStorage.setItem('jsoncraft.updated',new Date().toISOString());if(current)localStorage.setItem('jsoncraft.documents',JSON.stringify(documents));localStorage.setItem('jsoncraft.activeDocument',activeDocumentId||'');$('#saveState').textContent='Saved locally';dirty=false;$('#dirtyMark').style.display='none';}catch(e){$('#saveState').textContent='Storage unavailable';}}
 function snapshot(){history.push(clone(data));if(history.length>80)history.shift();future=[];updateHistoryButtons();}
 function updateHistoryButtons(){$('#undoBtn').disabled=!history.length;$('#redoBtn').disabled=!future.length;}
 function commit(mutator){snapshot();mutator();markDirty();saveLocal();render();}
