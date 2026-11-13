@@ -5,3 +5,10 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 .type-select{width:92px;min-height:28px;padding:4px 6px;font-size:9px;background-color:#111813}.field-top .field-actions{align-items:center}.field-actions .type-select{max-width:94px}.field-top .field-name-wrap{flex:1}
 @media(max-width:390px){.field-top{flex-wrap:wrap}.field-top .field-actions{width:100%;justify-content:flex-end}.field-actions .type-select{flex:1;max-width:120px}}
+/* Document manager */
+.document-select{max-width:190px;min-width:110px;border:1px solid var(--line);border-radius:7px;background:#111813;color:#e4eee5;padding:7px 28px 7px 9px;font:600 11px var(--mono);outline:none}
+.document-select:focus{border-color:#8caf6b}
+.new-document-btn{border-color:#40503f;color:#cce4b9}
+.new-document-btn:hover{border-color:#8caf6b;background:#253328}
+@media(max-width:760px){.file-label{width:100%;min-width:0}.document-select{flex:1;max-width:none;min-width:0}.tool-actions{flex-wrap:wrap}.new-document-btn{flex:1 0 100%!important;justify-content:center}.tool-actions .tool-btn.new-document-btn span{display:inline}}
+@media(max-width:390px){.document-select{font-size:10px}}
