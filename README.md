@@ -9,7 +9,7 @@ A visual, mobile-first JSON editor for people who want to work with structured d
 - Visual editor for strings, numbers, booleans, null, objects and arrays
 - Change the value type of an existing field
 - Structure explorer with nested navigation and field search
-- Add, duplicate and delete properties or array items
+- Add, rename, duplicate and delete properties or array items
 - Raw JSON editor with live parsing, validation and formatting
 - Undo and redo for visual edits
 - Import JSON files, copy the document and export a formatted .json file
